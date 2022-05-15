@@ -12,13 +12,14 @@ On the reduced graph, we will do an exhaustive search for the vertex cover, and 
 
 ### Data representations
 
-We shall represent a SAT instance as a list of clauses, where each clause is a list of pairs, where each pair is a variable name and the integer 0 if the variable appears alone, and 1 if the variable appears complemented. Note that this is the same represenntation as in the previous problem set. In our use, there shall be exactly three variables in any clause.
+We shall represent a SAT instance as a list of clauses, where each clause is a list of pairs, where each pair is a variable name and the integer 0 if the variable appears alone, and 1 if the variable appears complemented. Note that this is the same representation as in the previous problem set. In this projects there shall be exactly three variables in any clause (3SAT).
 
-We will wrap a CNF inside an instance of a CNF object which adds a few useful methods.
+The CNF is wrapped inside an instance of a CNF object which adds a few useful methods.
 
 A graph will be represented as an instance of a Graph class. The vertices and edges will be represented as lists.
 
-It is not necessary to proceed in this manner, but I have suggested that the names of the vertices of the graph be derived from the names of the appearances of the variables, as they appear in the formula. That a variable can appear multiple times, each with a distinct name, can be handled by forming a pair, with the name in the form of the CNF an integer index, which continuously increments with each vertex.
+For the reduction, I suggest thatas vertices are created, they are named as a pair of the variable name and a continuously incremented index. This will give distinct names that are easily recognized for its use in the k-cover graph.
+
 <pre>
      vertex := ( (name: string, logic: {0,1}), index: integer )
 </pre>
