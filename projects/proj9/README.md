@@ -1,6 +1,6 @@
-### Problem Set 9: Reductions and NP Completeness 
+## Problem Set 9: Reductions and NP Completeness 
 
-## Overview
+### Overview
 
 This homework will program the polynomial time reduction from 3SAT to k-Vertex Cover.
 
